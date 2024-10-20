@@ -26,7 +26,7 @@ Copy curated output file to your project. That's it!
 
 **Or, if you want to transpile by yourself..**
 
-```
+```sh
 git clone --recurse-submodules https://github.com/DongHoonPark/bluedef
 cd bluedef
 pip install -r requirements.txt
