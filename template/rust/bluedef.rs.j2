@@ -1,0 +1,10 @@
+pub mod bluetooth {
+    {%- for namespace, entries in namespaces.items() %}
+
+    pub mod {{ namespace.lower() }} {
+        {%- for entry in entries %}
+        pub const {{ entry.symbol }}: u16 = 0x{{ entry.identifier }};
+        {%- endfor %}
+    }  // mod {{ namespace.lower() }}
+    {%- endfor %}
+}

@@ -1,0 +1,17 @@
+#pragma once
+
+// Auto-generated Bluetooth definitions header
+// This file is generated from YAML configurations.
+
+#include <cstdint>
+
+namespace Bluetooth {
+{%- for namespace, entries in namespaces.items() %}
+// {{ namespace }}
+namespace {{ namespace }} {
+{%- for entry in entries %}
+constexpr uint16_t {{ entry.symbol }} = 0x{{ entry.identifier }};
+{%- endfor %}
+}  // namespace {{ namespace }}
+{%- endfor %}
+}  // namespace Bluetooth
